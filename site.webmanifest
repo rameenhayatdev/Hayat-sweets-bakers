@@ -1,0 +1,16 @@
+{
+  "name": "Hayat Sweets & Bakers",
+  "short_name": "Hayat Sweets",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#1b130e",
+  "theme_color": "#1b130e",
+  "icons": [
+    {
+      "src": "assets/favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

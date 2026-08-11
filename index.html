@@ -1,0 +1,2531 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <!-- =========================================================
+       HAYAT SWEETS & BAKERS — Landing Page
+       Phase 1: Semantic architecture skeleton (structure only)
+       Conventions: BEM-ready class names, meaningful IDs,
+       one H1 per page, banner comments per major block.
+  ========================================================== -->
+
+  <!-- =========================
+       DOCUMENT META
+  ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script>document.documentElement.classList.add("js");</script>
+
+  <title>Hayat Sweets &amp; Bakers | Luxury Patisserie &amp; Artisan Bakery</title>
+  <meta name="description" content="Hayat Sweets &amp; Bakers is a luxury patisserie and artisan bakery offering handcrafted desserts, freshly baked breads and refined dining. Explore our menu, browse the gallery and reserve your table.">
+  <meta name="keywords" content="luxury restaurant, patisserie, artisan bakery, fine dining, handcrafted desserts, fresh bread, afternoon tea, table reservation">
+  <meta name="author" content="Hayat Sweets &amp; Bakers">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1b130e">
+
+  <!-- Canonical URL — replace with the production domain before launch -->
+  <link rel="canonical" href="https://www.hayatsweetsandbakers.com/">
+
+  <!-- =========================
+       OPEN GRAPH & SOCIAL META
+       Placeholders — replace with final copy and assets
+  ========================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hayat Sweets &amp; Bakers">
+  <meta property="og:title" content="Hayat Sweets &amp; Bakers | Luxury Patisserie &amp; Artisan Bakery">
+  <meta property="og:description" content="Handcrafted desserts, artisan breads and refined dining. Reserve your table at Hayat Sweets &amp; Bakers.">
+  <meta property="og:url" content="https://www.hayatsweetsandbakers.com/">
+  <meta property="og:image" content="https://www.hayatsweetsandbakers.com/assets/images/og/og-cover.jpg">
+  <meta property="og:image:alt" content="Signature pastries from Hayat Sweets &amp; Bakers">
+  <meta property="og:locale" content="en_US">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hayat Sweets &amp; Bakers | Luxury Patisserie &amp; Artisan Bakery">
+  <meta name="twitter:description" content="Handcrafted desserts, artisan breads and refined dining. Reserve your table at Hayat Sweets &amp; Bakers.">
+  <meta name="twitter:image" content="https://www.hayatsweetsandbakers.com/assets/images/og/og-cover.jpg">
+
+  <!-- =========================
+       FAVICON & APP ICONS
+  ========================= -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- =========================
+       TYPOGRAPHY (Fontsource CDN)
+       Display face: Playfair Display | Body face: Manrope
+  ========================= -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5/400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5/600.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/playfair-display@5/400-italic.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/400.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/500.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/manrope@5/700.css">
+
+  <!-- =========================
+       STYLESHEETS
+  ========================= -->
+   <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+  <!-- =========================
+       STRUCTURED DATA (JSON-LD)
+       Replace bracketed placeholders with verified business details
+  ========================= -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Hayat Sweets & Bakers",
+      "description": "Luxury patisserie and artisan bakery offering handcrafted desserts, freshly baked breads and refined dining.",
+      "url": "https://www.hayatsweetsandbakers.com/",
+      "image": "https://www.hayatsweetsandbakers.com/assets/images/og/og-cover.jpg",
+      "servesCuisine": ["Patisserie", "Bakery", "Fine Dining"],
+      "priceRange": "$$$",
+      "telephone": "+00-000-000-0000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[Street address]",
+        "addressLocality": "[City]",
+        "postalCode": "[Postal code]",
+        "addressCountry": "[Country code]"
+      },
+      "openingHours": "[Opening hours specification]",
+      "acceptsReservations": "True"
+    }
+  </script>
+</head>
+
+<body>
+  <!-- Accessibility: keyboard skip link (visually hidden until focused) -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- =========================
+       SITE HEADER
+  ========================= -->
+  <header id="site-header" class="site-header">
+    <!-- Brand: inline SVG logo + wordmark -->
+    <a class="brand" href="#hero" aria-label="Hayat Sweets &amp; Bakers — back to top">
+      <!-- Logo asset -->
+    </a>
+
+    <!-- Primary Navigation -->
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Primary">
+      <!-- Mobile toggle: <button type="button" aria-expanded="false" aria-controls="nav-menu-list"> -->
+      <ul id="nav-menu-list" class="nav-list">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Header CTA: same-page anchor, so <a> is the correct control -->
+    <a class="button button--primary header-cta" href="#reservation">Reserve a Table</a>
+  </header>
+
+  <!-- =========================
+       MAIN CONTENT
+  ========================= -->
+  <main id="main">
+<!-- =========================
+     HERO SECTION
+========================================================= -->
+<section id="hero"
+         class="section hero"
+         data-hero
+         aria-labelledby="hero-heading">
+
+    <div class="container">
+
+        <div class="flow text-center hero-sequence">
+
+            <span class="badge reveal-hero" data-hero-sequence="1">
+                Premium Restaurant • Artisan Bakery
+            </span>
+
+            <h1 id="hero-heading"
+                class="hero-title reveal-hero"
+                data-hero-sequence="2">
+                Hayat Sweets &amp; Bakers
+            </h1>
+
+            <p class="section-subtitle reveal-hero" data-hero-sequence="3">
+                Experience handcrafted sweets, authentic Pakistani cuisine,
+                premium bakery creations and warm hospitality —
+                all under one luxurious roof.
+            </p>
+
+            <div class="ornament reveal-hero" data-hero-sequence="4"
+                 aria-hidden="true">
+                ❖
+            </div>
+
+            <div class="flex flex--center reveal-hero" data-hero-sequence="5">
+
+                <a href="#menu"
+                   class="button button--primary button--cta">
+                    Explore Menu
+                </a>
+
+                <a href="#reservation"
+                   class="button button--secondary">
+                    Reserve Table
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     ABOUT SECTION
+     Version 3 — Premium Story / Heritage Layout
+========================================================= -->
+<section
+    id="about"
+    class="section about"
+    aria-labelledby="about-heading"
+>
+
+    <div class="container">
+
+        <!-- Section introduction -->
+        <div class="about-intro text-center reveal">
+
+            <span class="badge">
+                About Us
+            </span>
+
+            <h2
+                id="about-heading"
+                class="section-title"
+            >
+                Where Tradition Meets Excellence
+            </h2>
+
+            <p class="section-subtitle">
+                At Hayat Sweets &amp; Bakers, timeless Pakistani flavours
+                meet refined craftsmanship, creating memorable moments
+                through sweets, bakery creations, cuisine and warm hospitality.
+            </p>
+
+        </div>
+
+
+        <!-- Main story layout -->
+        <div class="about-story">
+
+            <!-- Story content -->
+            <div class="about-content reveal-left">
+
+                <span class="about-eyebrow">
+                    Our Story
+                </span>
+
+                <h3 class="about-heading">
+                    Crafted with tradition.
+                    Served with heart.
+                </h3>
+
+                <p>
+                    Hayat Sweets &amp; Bakers brings together the richness
+                    of Pakistani culinary tradition with the care and
+                    presentation of modern craftsmanship.
+                </p>
+
+                <p>
+                    From handcrafted mithai and freshly baked creations
+                    to authentic savoury dishes, every recipe is prepared
+                    with carefully selected ingredients, attention to detail
+                    and a genuine passion for quality.
+                </p>
+
+
+                <!-- Feature highlights -->
+                <div class="about-features" data-stagger data-stagger-delay="110">
+
+                    <article class="about-feature reveal-card" data-stagger-item>
+                        <span
+                            class="about-feature-icon"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </span>
+
+                        <div>
+                            <h4>Fresh Ingredients</h4>
+
+                            <p>
+                                Carefully selected ingredients for
+                                exceptional freshness and flavour.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="about-feature reveal-card" data-stagger-item>
+                        <span
+                            class="about-feature-icon"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </span>
+
+                        <div>
+                            <h4>Expert Craftsmanship</h4>
+
+                            <p>
+                                Traditional recipes prepared with
+                                skill, patience and modern precision.
+                            </p>
+                        </div>
+                    </article>
+
+
+                    <article class="about-feature reveal-card" data-stagger-item>
+                        <span
+                            class="about-feature-icon"
+                            aria-hidden="true"
+                        >
+                            ✦
+                        </span>
+
+                        <div>
+                            <h4>Warm Hospitality</h4>
+
+                            <p>
+                                A welcoming experience designed to make
+                                every visit feel special.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <a
+                    href="#menu"
+                    class="button button--primary button--cta"
+                >
+                    Discover Our Menu
+                </a>
+
+            </div>
+
+
+            <!-- About image -->
+            <figure
+                class="about-visual image-frame reveal-right"
+            >
+
+                <div class="about-image-wrap">
+
+                    <img
+                        src="assets/images/about/about-restaurant.jpg"
+                        alt="Elegant interior of Hayat Sweets & Bakers"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+                <figcaption>
+                    A place where tradition, flavour and hospitality
+                    come together.
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================
+     FEATURED DISHES SECTION
+     Version 1 — Premium Product Showcase
+========================= -->
+<section
+    id="featured-dishes"
+    class="section featured-dishes"
+    aria-labelledby="featured-dishes-heading">
+
+    <div class="container">
+
+        <!-- Section Introduction -->
+        <div class="flow text-center">
+
+            <span class="badge">
+                Our Signatures
+            </span>
+
+            <h2
+                id="featured-dishes-heading"
+                class="section-title">
+                Featured Dishes
+            </h2>
+
+            <p class="section-subtitle">
+                Discover a selection of handcrafted sweets, freshly baked
+                favourites, and savoury creations prepared with care at
+                Hayat Sweets &amp; Bakers.
+            </p>
+
+        </div>
+
+
+        <!-- Featured Dish Grid -->
+        <div class="grid grid--auto-fit featured-dishes-grid">
+
+
+            <!-- =========================
+                 FEATURED ITEM 01
+            ========================= -->
+            <article class="card featured-card reveal-card" data-stagger-item>
+
+                <figure class="featured-card__media">
+
+                    <img
+                        src="assets/images/featured/barfi.jpg"
+                        alt="Traditional handcrafted barfi"
+                        loading="lazy">
+
+                </figure>
+
+                <div class="featured-card__content">
+
+                    <span class="featured-card__category">
+    Traditional Mithai
+</span>
+
+                    <h3 class="featured-card__title">
+                        Traditional Barfi
+                    </h3>
+
+                    <p class="featured-card__description">
+                        Delicate, creamy barfi prepared with rich ingredients
+                        and the timeless flavours of traditional Pakistani
+                        mithai.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 FEATURED ITEM 02
+            ========================= -->
+            <article class="card featured-card reveal-card" data-stagger-item>
+
+                <figure class="featured-card__media">
+
+                    <img
+                        src="assets/images/featured/gulab-jamun.jpg"
+                        alt="Fresh traditional gulab jamun"
+                        loading="lazy">
+
+                </figure>
+
+                <div class="featured-card__content">
+
+                    <span class="featured-card__category">
+                        Traditional Mithai
+                    </span>
+
+                    <h3 class="featured-card__title">
+                        Gulab Jamun
+                    </h3>
+
+                    <p class="featured-card__description">
+                        Soft, golden gulab jamun delicately soaked in fragrant
+                        syrup for a classic sweet experience.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 FEATURED ITEM 03
+            ========================= -->
+            <article class="card featured-card reveal-card" data-stagger-item>
+
+                <figure class="featured-card__media">
+
+                    <img
+                        src="assets/images/featured/rasmalai.jpg"
+                        alt="Traditional creamy rasmalai"
+                        loading="lazy">
+
+                </figure>
+
+                <div class="featured-card__content">
+
+                    <span class="featured-card__category">
+                       Traditional Mithai
+                    </span>
+
+                    <h3 class="featured-card__title">
+                        Classic Rasmalai
+                    </h3>
+
+                    <p class="featured-card__description">
+                        Soft, delicate dumplings served in a rich and creamy
+                        milk base with a refined touch of traditional flavour.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 FEATURED ITEM 04
+            ========================= -->
+            <article class="card featured-card reveal-card" data-stagger-item>
+
+                <figure class="featured-card__media">
+
+                    <img
+                        src="assets/images/featured/chocolate-cake.jpg"
+                        alt="Rich chocolate cake from Hayat Sweets & Bakers"
+                        loading="lazy">
+
+                </figure>
+
+                <div class="featured-card__content">
+
+                    <span class="featured-card__category">
+                        Artisan Bakery
+                    </span>
+
+                    <h3 class="featured-card__title">
+                        Chocolate Cake
+                    </h3>
+
+                    <p class="featured-card__description">
+                        A rich chocolate creation crafted for celebrations,
+                        gatherings, and moments worth remembering.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 FEATURED ITEM 05
+            ========================= -->
+            <article class="card featured-card reveal-card" data-stagger-item>
+
+                <figure class="featured-card__media">
+
+                    <img
+                        src="assets/images/featured/pastries.jpg"
+                        alt="Fresh assorted bakery pastries"
+                        loading="lazy">
+
+                </figure>
+
+                <div class="featured-card__content">
+
+                    <span class="featured-card__category">
+                        Fresh Bakery
+                    </span>
+
+                    <h3 class="featured-card__title">
+                        Fresh Pastries
+                    </h3>
+
+                    <p class="featured-card__description">
+                        Light, delicate pastries prepared fresh for a
+                        satisfying bakery experience.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 FEATURED ITEM 06
+            ========================= -->
+            <article class="card featured-card reveal-card" data-stagger-item>
+
+                <figure class="featured-card__media">
+
+                    <img
+                        src="assets/images/featured/Cheese-Rolls.jpg"
+                        alt="Fresh crispy cheese rolls"
+                        loading="lazy">
+
+                </figure>
+
+                <div class="featured-card__content">
+
+                    <span class="featured-card__category">
+                        Savoury Favourite
+                    </span>
+
+                    <h3 class="featured-card__title">
+                        Cheese Rolls
+                    </h3>
+
+                    <p class="featured-card__description">
+                        Crisp golden rolls filled with a delicious savoury
+                        cheese centre, perfect for a light bite.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- Section CTA -->
+        <div class="flex flex--center featured-dishes__action">
+
+            <a
+                href="#menu"
+                class="button button--primary button--cta">
+                Explore Full Menu
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     MENU SECTION
+========================================================= -->
+<section
+    id="menu"
+    class="section menu"
+    aria-labelledby="menu-heading">
+
+    <div class="container">
+
+        <!-- =========================
+             MENU INTRODUCTION
+        ========================= -->
+        <div class="menu-intro flow text-center">
+
+            <span class="badge">
+                From Our Kitchen
+            </span>
+
+            <h2
+                id="menu-heading"
+                class="section-title">
+                A Taste for Every Occasion
+            </h2>
+
+            <p class="section-subtitle">
+                From timeless Pakistani mithai to freshly baked favourites
+                and savoury treats, every creation is prepared with care,
+                quality ingredients, and a passion for great taste.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             MENU CATEGORY GRID
+        ========================= -->
+        <div class="menu-grid">
+
+
+            <!-- =========================
+                 TRADITIONAL MITHAI
+            ========================= -->
+            <article class="menu-panel">
+
+                <div class="menu-panel__header">
+
+                    <span class="menu-panel__eyebrow">
+                        Traditional Collection
+                    </span>
+
+                    <h3 class="menu-panel__title">
+                        Traditional Mithai
+                    </h3>
+
+                    <p class="menu-panel__description">
+                        Timeless Pakistani sweets crafted with rich
+                        flavours and traditional care.
+                    </p>
+
+                </div>
+
+
+                <ul class="menu-list">
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Barfi</h4>
+                            <p>
+                                Delicate and creamy mithai with a rich,
+                                traditional finish.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Gulab Jamun</h4>
+                            <p>
+                                Soft golden dumplings soaked in fragrant
+                                sugar syrup.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Rasmalai</h4>
+                            <p>
+                                Delicate milk dumplings served in a
+                                luxurious creamy base.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Jalebi</h4>
+                            <p>
+                                Crisp golden spirals finished with
+                                fragrant sweet syrup.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Besan Ladoo</h4>
+                            <p>
+                                Rich, aromatic ladoos prepared with
+                                roasted gram flour.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- =========================
+                 FRESH BAKERY
+            ========================= -->
+            <article class="menu-panel">
+
+                <div class="menu-panel__header">
+
+                    <span class="menu-panel__eyebrow">
+                        From Our Oven
+                    </span>
+
+                    <h3 class="menu-panel__title">
+                        Fresh Bakery
+                    </h3>
+
+                    <p class="menu-panel__description">
+                        Freshly prepared bakery favourites made for
+                        everyday indulgence and celebrations.
+                    </p>
+
+                </div>
+
+
+                <ul class="menu-list">
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Chocolate Cake</h4>
+                            <p>
+                                Rich chocolate layers finished with
+                                smooth chocolate frosting.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Black Forest Cake</h4>
+                            <p>
+                                Classic chocolate cake layered with
+                                cream and cherry flavours.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Fresh Pastries</h4>
+                            <p>
+                                Light, delicate pastries prepared fresh
+                                for a satisfying bakery experience.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Cream Rolls</h4>
+                            <p>
+                                Golden pastry rolls filled with
+                                smooth, delicate cream.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Donuts</h4>
+                            <p>
+                                Soft, freshly baked donuts finished
+                                with delicious toppings.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- =========================
+                 NAMKEEN & SAVOURIES
+            ========================= -->
+            <article class="menu-panel">
+
+                <div class="menu-panel__header">
+
+                    <span class="menu-panel__eyebrow">
+                        Savoury Selection
+                    </span>
+
+                    <h3 class="menu-panel__title">
+                        Namkeen &amp; Savouries
+                    </h3>
+
+                    <p class="menu-panel__description">
+                        Crisp, golden savouries perfect for tea time,
+                        gatherings, and quick bites.
+                    </p>
+
+                </div>
+
+
+                <ul class="menu-list">
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Cheese Rolls</h4>
+                            <p>
+                                Crisp golden rolls with a delicious
+                                savoury cheese centre.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Chicken Patties</h4>
+                            <p>
+                                Flaky golden pastry filled with a
+                                savoury chicken filling.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Samosa</h4>
+                            <p>
+                                Crisp pastry filled with a warmly
+                                seasoned savoury filling.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Chicken Rolls</h4>
+                            <p>
+                                Golden rolls filled with a delicious
+                                seasoned chicken mixture.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Vegetable Patties</h4>
+                            <p>
+                                Flaky pastry filled with a savoury
+                                vegetable mixture.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </article>
+
+
+            <!-- =========================
+                 DRINKS
+            ========================= -->
+            <article class="menu-panel">
+
+                <div class="menu-panel__header">
+
+                    <span class="menu-panel__eyebrow">
+                        Refreshments
+                    </span>
+
+                    <h3 class="menu-panel__title">
+                        Drinks &amp; Refreshments
+                    </h3>
+
+                    <p class="menu-panel__description">
+                        Cool, refreshing favourites and comforting
+                        drinks to complete your experience.
+                    </p>
+
+                </div>
+
+
+                <ul class="menu-list">
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Fresh Lime</h4>
+                            <p>
+                                Bright, refreshing citrus drink served
+                                chilled.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Mint Margarita</h4>
+                            <p>
+                                Cool mint and citrus flavours blended
+                                into a refreshing drink.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Mango Shake</h4>
+                            <p>
+                                Smooth and creamy mango shake prepared
+                                with rich mango flavour.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Fresh Lassi</h4>
+                            <p>
+                                Traditional creamy yogurt drink served
+                                chilled and refreshing.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Cold Coffee</h4>
+                            <p>
+                                Smooth chilled coffee with a rich,
+                                creamy finish.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+
+                    <li class="menu-item">
+
+                        <div class="menu-item__info">
+                            <h4>Kashmiri Chai</h4>
+                            <p>
+                                Aromatic traditional tea with a delicate
+                                and comforting character.
+                            </p>
+                        </div>
+
+                        <span class="menu-item__price">
+                            Rs. —
+                        </span>
+
+                    </li>
+
+                </ul>
+
+            </article>
+
+        </div>
+
+
+        <!-- =========================
+             MENU CTA
+        ========================= -->
+        <div class="flex flex--center menu__action">
+
+            <a
+                href="#contact"
+                class="button button--primary button--cta">
+                Visit Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
+<section
+    id="why-choose-us"
+    class="section why-choose-us"
+    aria-labelledby="why-choose-us-heading">
+
+    <div class="container">
+
+        <!-- Section Intro -->
+        <div class="why-choose-us__intro flow text-center reveal-up">
+
+            <span class="badge">
+                The Hayat Difference
+            </span>
+
+            <h2
+                id="why-choose-us-heading"
+                class="section-title">
+                Crafted With Care,
+                Served With Pride
+            </h2>
+
+            <p class="section-subtitle">
+                From the first ingredient to the final touch,
+                everything we create reflects our commitment to
+                quality, tradition, freshness, and genuine hospitality.
+            </p>
+
+        </div>
+
+
+        <!-- Value Cards -->
+        <div class="why-choose-us__grid stagger" data-stagger data-stagger-delay="100">
+
+
+            <!-- =========================
+                 CARD 01
+            ========================= -->
+            <article class="why-card reveal-card" data-stagger-item>
+
+                <div class="why-card__number">
+                    01
+                </div>
+
+                <div class="why-card__icon" aria-hidden="true">
+                    ✦
+                </div>
+
+                <div class="why-card__content">
+
+                    <span class="why-card__eyebrow">
+                        Quality First
+                    </span>
+
+                    <h3>
+                        Premium Ingredients
+                    </h3>
+
+                    <p>
+                        We carefully select quality ingredients to
+                        create sweets, bakery favourites, and savoury
+                        creations with exceptional taste and freshness.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 CARD 02
+            ========================= -->
+            <article class="why-card reveal-card" data-stagger-item>
+
+                <div class="why-card__number">
+                    02
+                </div>
+
+                <div class="why-card__icon" aria-hidden="true">
+                    ❖
+                </div>
+
+                <div class="why-card__content">
+
+                    <span class="why-card__eyebrow">
+                        Made Fresh
+                    </span>
+
+                    <h3>
+                        Fresh Every Day
+                    </h3>
+
+                    <p>
+                        Our bakery and kitchen creations are prepared
+                        with care so every visit brings you freshness,
+                        flavour, and consistency.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 CARD 03
+            ========================= -->
+            <article class="why-card reveal-card" data-stagger-item>
+
+                <div class="why-card__number">
+                    03
+                </div>
+
+                <div class="why-card__icon" aria-hidden="true">
+                    ◇
+                </div>
+
+                <div class="why-card__content">
+
+                    <span class="why-card__eyebrow">
+                        Rooted In Tradition
+                    </span>
+
+                    <h3>
+                        Authentic Flavours
+                    </h3>
+
+                    <p>
+                        Traditional Pakistani flavours meet thoughtful
+                        craftsmanship, bringing familiar favourites to
+                        your table with a refined touch.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <!-- =========================
+                 CARD 04
+            ========================= -->
+            <article class="why-card reveal-card" data-stagger-item>
+
+                <div class="why-card__number">
+                    04
+                </div>
+
+                <div class="why-card__icon" aria-hidden="true">
+                    ✧
+                </div>
+
+                <div class="why-card__content">
+
+                    <span class="why-card__eyebrow">
+                        For Every Occasion
+                    </span>
+
+                    <h3>
+                        Something For Everyone
+                    </h3>
+
+                    <p>
+                        From mithai and cakes to savoury bakery treats
+                        and refreshing drinks, there is something special
+                        for every craving and celebration.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- Bottom Statement -->
+        <div class="why-choose-us__statement">
+
+            <span class="why-choose-us__line"></span>
+
+            <p>
+                <span>Hayat Sweets &amp; Bakers</span>
+                — where tradition becomes an experience.
+            </p>
+
+            <span class="why-choose-us__line"></span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section
+    id="gallery"
+    class="section gallery"
+    aria-labelledby="gallery-heading">
+
+    <div class="container">
+
+        <!-- Gallery Introduction -->
+        <div class="flow text-center gallery__intro reveal-up">
+
+            <span class="badge">
+                A Glimpse of Hayat
+            </span>
+
+            <h2
+                id="gallery-heading"
+                class="section-title">
+                Crafted with Passion
+            </h2>
+
+            <p class="section-subtitle">
+                Step inside Hayat Sweets &amp; Bakers and discover
+                the craftsmanship, warmth, and timeless flavours
+                behind every creation.
+            </p>
+
+        </div>
+
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid stagger" data-stagger data-stagger-delay="90">
+
+
+            <!-- 01 — Large Interior -->
+            <figure class="gallery-item reveal-card" data-stagger-item gallery-item--large">
+
+                <img
+                    src="assets/images/gallery/bakery-interior.jpg"
+                    alt="Elegant interior of Hayat Sweets & Bakers"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Our Space</span>
+                    <strong>Warm &amp; Welcoming</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 02 — Mithai Close Up -->
+            <figure class="gallery-item reveal-card" data-stagger-item>
+
+                <img
+                    src="assets/images/gallery/mithai-closeup.jpg"
+                    alt="Close-up of traditional Pakistani mithai"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Traditional Mithai</span>
+                    <strong>Made with Care</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 03 — Celebration Cakes -->
+            <figure class="gallery-item reveal-card" data-stagger-item>
+
+                <img
+                    src="assets/images/gallery/celebration-cakes.jpg"
+                    alt="Beautiful celebration cakes at Hayat Sweets & Bakers"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Celebrations</span>
+                    <strong>Sweet Moments</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 04 — Bakery Craftsman -->
+            <figure class="gallery-item reveal-card" data-stagger-item gallery-item--tall">
+
+                <img
+                    src="assets/images/gallery/bakery-craftsmanship.jpg"
+                    alt="Bakery craftsman preparing fresh bakery creations"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Our Craft</span>
+                    <strong>Made Fresh</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 05 — Mithai Display -->
+            <figure class="gallery-item reveal-card" data-stagger-item gallery-item--wide">
+
+                <img
+                    src="assets/images/gallery/mithai-display.jpg"
+                    alt="Premium assortment of traditional Pakistani sweets"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Signature Collection</span>
+                    <strong>Traditional Flavours</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 06 — Bakery Display -->
+            <figure class="gallery-item reveal-card" data-stagger-item>
+
+                <img
+                    src="assets/images/gallery/bakery-display.jpg"
+                    alt="Freshly baked bakery products on display"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Fresh Bakery</span>
+                    <strong>Fresh Every Day</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 07 — Namkeen -->
+            <figure class="gallery-item reveal-card" data-stagger-item>
+
+                <img
+                    src="assets/images/gallery/namkeen-assortment.jpg"
+                    alt="Assortment of traditional Pakistani namkeen"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Namkeen</span>
+                    <strong>Savoury Favourites</strong>
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 08 — Display Counter -->
+            <figure class="gallery-item reveal-card" data-stagger-item gallery-item--wide">
+
+                <img
+                    src="assets/images/gallery/display-counter.jpg"
+                    alt="Hayat Sweets & Bakers display counter"
+                    loading="lazy">
+
+                <figcaption>
+                    <span>Inside Hayat</span>
+                    <strong>Something for Everyone</strong>
+                </figcaption>
+
+            </figure>
+
+
+        </div>
+
+
+        <!-- Gallery CTA -->
+        <div class="flex flex--center gallery__action">
+
+            <a
+                href="#menu"
+                class="button button--primary button--cta">
+                Explore Our Menu
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+  <!-- =========================================================
+     TESTIMONIALS SECTION — VERSION 2
+========================================================= -->
+<section
+    id="testimonials"
+    class="section testimonials"
+    aria-labelledby="testimonials-heading">
+
+    <div class="container">
+
+        <!-- Section Introduction -->
+        <div class="flow text-center testimonials__intro reveal-up">
+
+            <span class="badge">
+                Guest Experiences
+            </span>
+
+            <h2
+                id="testimonials-heading"
+                class="section-title">
+                Loved by Our Guests
+            </h2>
+
+            <p class="section-subtitle">
+                From traditional Pakistani mithai to freshly baked
+                favourites, discover what guests love about the
+                Hayat Sweets &amp; Bakers experience.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             TESTIMONIAL GRID
+        ====================================================== -->
+        <div class="testimonials__grid stagger" data-stagger data-stagger-delay="120">
+
+
+            <!-- TESTIMONIAL 01 -->
+            <article class="testimonial-card reveal-card" data-stagger-item>
+
+                <div
+                    class="testimonial-card__top">
+
+                    <span
+                        class="testimonial-card__category">
+                        Traditional Mithai
+                    </span>
+
+                    <div
+                        class="testimonial-card__rating"
+                        aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <blockquote class="testimonial-card__quote">
+
+                    <p>
+                        The barfi and gulab jamun were incredibly
+                        fresh and full of authentic flavour.
+                        Everything was beautifully prepared and
+                        tasted like traditional homemade mithai.
+                    </p>
+
+                </blockquote>
+
+
+                <div class="testimonial-card__author">
+
+                    <div
+                        class="testimonial-card__avatar"
+                        aria-hidden="true">
+                        A
+                    </div>
+
+                    <div class="testimonial-card__author-info">
+
+                        <cite>
+                            Ayesha K.
+                        </cite>
+
+                        <span>
+                            Guest Experience
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 TESTIMONIAL 02 — FEATURED
+            ================================================== -->
+            <article
+                class="testimonial-card testimonial-card--featured reveal-card"
+                data-stagger-item>
+
+                <div
+                    class="testimonial-card__top">
+
+                    <span
+                        class="testimonial-card__category">
+                        Bakery
+                    </span>
+
+                    <div
+                        class="testimonial-card__rating"
+                        aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <blockquote class="testimonial-card__quote">
+
+                    <p>
+                        We ordered a chocolate cake for a family
+                        celebration and were impressed by the
+                        presentation, freshness, and rich chocolate
+                        flavour. A wonderful experience from start
+                        to finish.
+                    </p>
+
+                </blockquote>
+
+
+                <div class="testimonial-card__author">
+
+                    <div
+                        class="testimonial-card__avatar"
+                        aria-hidden="true">
+                        H
+                    </div>
+
+                    <div class="testimonial-card__author-info">
+
+                        <cite>
+                            Hamza A.
+                        </cite>
+
+                        <span>
+                            Guest Experience
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TESTIMONIAL 03 -->
+            <article class="testimonial-card reveal-card" data-stagger-item>
+
+                <div
+                    class="testimonial-card__top">
+
+                    <span
+                        class="testimonial-card__category">
+                        Regular Guest
+                    </span>
+
+                    <div
+                        class="testimonial-card__rating"
+                        aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <blockquote class="testimonial-card__quote">
+
+                    <p>
+                        A beautiful place to enjoy traditional
+                        sweets alongside fresh bakery favourites.
+                        The quality is consistent and the atmosphere
+                        feels warm and welcoming.
+                    </p>
+
+                </blockquote>
+
+
+                <div class="testimonial-card__author">
+
+                    <div
+                        class="testimonial-card__avatar"
+                        aria-hidden="true">
+                        S
+                    </div>
+
+                    <div class="testimonial-card__author-info">
+
+                        <cite>
+                            Sana R.
+                        </cite>
+
+                        <span>
+                            Regular Guest
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TESTIMONIAL 04 -->
+            <article class="testimonial-card reveal-card" data-stagger-item>
+
+                <div
+                    class="testimonial-card__top">
+
+                    <span
+                        class="testimonial-card__category">
+                        Family Visit
+                    </span>
+
+                    <div
+                        class="testimonial-card__rating"
+                        aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <blockquote class="testimonial-card__quote">
+
+                    <p>
+                        We visited with our family and loved the
+                        variety. There was something for everyone,
+                        from classic mithai to freshly baked
+                        pastries. The whole experience felt special.
+                    </p>
+
+                </blockquote>
+
+
+                <div class="testimonial-card__author">
+
+                    <div
+                        class="testimonial-card__avatar"
+                        aria-hidden="true">
+                        F
+                    </div>
+
+                    <div class="testimonial-card__author-info">
+
+                        <cite>
+                            Fatima M.
+                        </cite>
+
+                        <span>
+                            Family Guest
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TESTIMONIAL 05 -->
+            <article class="testimonial-card reveal-card" data-stagger-item>
+
+                <div
+                    class="testimonial-card__top">
+
+                    <span
+                        class="testimonial-card__category">
+                        Sweets &amp; Bakery
+                    </span>
+
+                    <div
+                        class="testimonial-card__rating"
+                        aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <blockquote class="testimonial-card__quote">
+
+                    <p>
+                        The sweets were fresh, delicately prepared,
+                        and perfectly balanced. You can really
+                        appreciate the attention given to flavour
+                        and presentation.
+                    </p>
+
+                </blockquote>
+
+
+                <div class="testimonial-card__author">
+
+                    <div
+                        class="testimonial-card__avatar"
+                        aria-hidden="true">
+                        U
+                    </div>
+
+                    <div class="testimonial-card__author-info">
+
+                        <cite>
+                            Usman H.
+                        </cite>
+
+                        <span>
+                            Guest Experience
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- TESTIMONIAL 06 -->
+            <article class="testimonial-card reveal-card" data-stagger-item>
+
+                <div
+                    class="testimonial-card__top">
+
+                    <span
+                        class="testimonial-card__category">
+                        Guest Experience
+                    </span>
+
+                    <div
+                        class="testimonial-card__rating"
+                        aria-label="5 out of 5 stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+
+                <blockquote class="testimonial-card__quote">
+
+                    <p>
+                        Hayat Sweets &amp; Bakers combines traditional
+                        Pakistani flavours with a modern bakery
+                        experience beautifully. Everything we tried
+                        was fresh, delicious, and thoughtfully presented.
+                    </p>
+
+                </blockquote>
+
+
+                <div class="testimonial-card__author">
+
+                    <div
+                        class="testimonial-card__avatar"
+                        aria-hidden="true">
+                        Z
+                    </div>
+
+                    <div class="testimonial-card__author-info">
+
+                        <cite>
+                            Zainab A.
+                        </cite>
+
+                        <span>
+                            Happy Guest
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- =====================================================
+             TRUST STATEMENT
+        ====================================================== -->
+        <div class="testimonials__trust">
+
+            <span aria-hidden="true">✦</span>
+
+            <p>
+                Crafted with care. Served with warmth.
+            </p>
+
+            <span aria-hidden="true">✦</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- =========================================================
+     RESERVATION SECTION
+     Premium reservation experience
+========================================================= -->
+<section
+    id="reservation"
+    class="section reservation"
+    aria-labelledby="reservation-heading">
+
+    <div class="container">
+
+        <div class="reservation__layout">
+
+            <!-- =================================================
+                 RESERVATION INTRO
+            ================================================== -->
+            <div class="reservation__content reveal-left">
+
+                <span class="badge">
+                    Reservations
+                </span>
+
+                <h2
+                    id="reservation-heading"
+                    class="section-title">
+                    Reserve Your Table
+                </h2>
+
+                <p class="reservation__lead">
+                    Make your next visit memorable. Reserve a table
+                    and enjoy handcrafted sweets, fresh bakery
+                    favourites, and a warm dining experience at
+                    Hayat Sweets &amp; Bakers.
+                </p>
+
+
+                <!-- Decorative divider -->
+                <div
+                    class="reservation__divider"
+                    aria-hidden="true">
+                    <span></span>
+                    ✦
+                    <span></span>
+                </div>
+
+
+                <!-- Reservation highlights -->
+                <div class="reservation__highlights">
+
+                    <div class="reservation__highlight">
+
+                        <span
+                            class="reservation__highlight-icon"
+                            aria-hidden="true">
+                            ✦
+                        </span>
+
+                        <div>
+                            <h3>
+                                Warm Hospitality
+                            </h3>
+
+                            <p>
+                                A welcoming atmosphere for
+                                families, friends, and celebrations.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reservation__highlight">
+
+                        <span
+                            class="reservation__highlight-icon"
+                            aria-hidden="true">
+                            ◆
+                        </span>
+
+                        <div>
+                            <h3>
+                                Freshly Prepared
+                            </h3>
+
+                            <p>
+                                Enjoy carefully prepared sweets,
+                                bakery creations, and dining favourites.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="reservation__highlight">
+
+                        <span
+                            class="reservation__highlight-icon"
+                            aria-hidden="true">
+                            ◇
+                        </span>
+
+                        <div>
+                            <h3>
+                                Special Occasions
+                            </h3>
+
+                            <p>
+                                Planning a family gathering or
+                                celebration? Let us prepare for you.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RESERVATION FORM
+            ================================================== -->
+            <div class="reservation__form-wrapper reveal-right">
+
+                <div class="reservation__form-header">
+
+                    <span class="reservation__form-kicker">
+                        Table Request
+                    </span>
+
+                    <h3>
+                        Plan Your Visit
+                    </h3>
+
+                    <p>
+                        Complete the details below and send us
+                        your reservation request.
+                    </p>
+
+                </div>
+
+
+                <form
+                    class="reservation-form"
+                    action="#"
+                    method="post">
+
+
+                    <!-- Name -->
+                    <div class="form-field">
+
+                        <label for="reservation-name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="reservation-name"
+                            name="name"
+                            placeholder="Your full name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-field">
+
+                        <label for="reservation-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="reservation-email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="form-field">
+
+                        <label for="reservation-phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="reservation-phone"
+                            name="phone"
+                            placeholder="Your phone number"
+                            autocomplete="tel"
+                            required>
+
+                    </div>
+
+
+                    <!-- Date + Time -->
+                    <div class="reservation-form__row">
+
+                        <div class="form-field">
+
+                            <label for="reservation-date">
+                                Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="reservation-date"
+                                name="date"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="reservation-time">
+                                Preferred Time
+                            </label>
+
+                            <input
+                                type="time"
+                                id="reservation-time"
+                                name="time"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Guests -->
+                    <div class="form-field">
+
+                        <label for="reservation-guests">
+                            Number of Guests
+                        </label>
+
+                        <select
+                            id="reservation-guests"
+                            name="guests"
+                            required>
+
+                            <option value="" selected disabled>
+                                Select guests
+                            </option>
+
+                            <option value="1">
+                                1 Guest
+                            </option>
+
+                            <option value="2">
+                                2 Guests
+                            </option>
+
+                            <option value="3">
+                                3 Guests
+                            </option>
+
+                            <option value="4">
+                                4 Guests
+                            </option>
+
+                            <option value="5">
+                                5 Guests
+                            </option>
+
+                            <option value="6">
+                                6 Guests
+                            </option>
+
+                            <option value="7">
+                                7 Guests
+                            </option>
+
+                            <option value="8">
+                                8 Guests
+                            </option>
+
+                            <option value="9">
+                                9 Guests
+                            </option>
+
+                            <option value="10+">
+                                10+ Guests
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Special Request -->
+                    <div class="form-field">
+
+                        <label for="reservation-message">
+                            Special Request
+                            <span class="form-field__optional">
+                                Optional
+                            </span>
+                        </label>
+
+                        <textarea
+                            id="reservation-message"
+                            name="message"
+                            rows="4"
+                            placeholder="Birthday, family gathering, seating preference, or any special request..."></textarea>
+
+                    </div>
+
+
+                    <!-- Submit -->
+                    <button
+                        type="submit"
+                        class="button button--primary reservation-form__submit">
+
+                        <span>
+                            Request a Reservation
+                        </span>
+
+                        <span
+                            class="reservation-form__arrow"
+                            aria-hidden="true">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <p class="reservation-form__note">
+                        Reservation requests are subject to
+                        availability. Our team will confirm your
+                        request separately.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+  <!-- =========================================================
+     CONTACT SECTION
+========================================================= -->
+
+<section
+    id="contact"
+    class="section contact"
+    aria-labelledby="contact-heading">
+
+    <div class="container">
+
+        <div class="contact__layout">
+
+            <!-- =================================================
+                 CONTACT INTRO
+            ================================================== -->
+
+            <div class="contact__content reveal-left">
+
+                <span class="badge">
+                    Get In Touch
+                </span>
+
+                <h2
+                    id="contact-heading"
+                    class="section-title">
+                    We'd Love to Hear From You
+                </h2>
+
+                <p class="contact__lead">
+                    Whether you're planning a family visit,
+                    celebrating a special occasion, or simply
+                    craving something freshly prepared,
+                    we're here to welcome you.
+                </p>
+
+
+                <!-- Decorative divider -->
+
+                <div
+                    class="contact__divider"
+                    aria-hidden="true">
+
+                    <span></span>
+                    ✦
+                    <span></span>
+
+                </div>
+
+
+                <!-- Opening Hours -->
+
+                <div class="contact__hours">
+
+                    <span class="contact__eyebrow">
+                        Visit Us
+                    </span>
+
+                    <h3>
+                        Opening Hours
+                    </h3>
+
+                    <div class="contact__hours-row">
+
+                        <span>
+                            Monday – Sunday
+                        </span>
+
+                        <strong>
+                            10:00 AM – 11:00 PM
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Social Links -->
+
+                <div class="contact__social">
+
+                    <span class="contact__eyebrow">
+                        Follow Along
+                    </span>
+
+                    <div class="contact__social-links">
+
+                        <a
+                            href="#"
+                            aria-label="Instagram">
+                            Instagram
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Facebook">
+                            Facebook
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 CONTACT INFORMATION CARD
+            ================================================== -->
+
+            <div class="contact__card reveal-right">
+
+                <div class="contact__card-header">
+
+                    <span class="contact__card-kicker">
+                        Hayat Sweets &amp; Bakers
+                    </span>
+
+                    <h3>
+                        Contact Information
+                    </h3>
+
+                    <p>
+                        We're always happy to welcome you.
+                    </p>
+
+                </div>
+
+
+                <!-- Location -->
+
+                <div class="contact__item">
+
+                    <span
+                        class="contact__item-icon"
+                        aria-hidden="true">
+                        ◉
+                    </span>
+
+                    <div>
+
+                        <span class="contact__item-label">
+                            Location
+                        </span>
+
+                        <p>
+                            Your Restaurant Address
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Phone -->
+
+                <div class="contact__item">
+
+                    <span
+                        class="contact__item-icon"
+                        aria-hidden="true">
+                        ✦
+                    </span>
+
+                    <div>
+
+                        <span class="contact__item-label">
+                            Phone
+                        </span>
+
+                        <p>
+                            <a href="tel:+920000000000">
+                                +92 XXX XXXXXXX
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="contact__item">
+
+                    <span
+                        class="contact__item-icon"
+                        aria-hidden="true">
+                        ◇
+                    </span>
+
+                    <div>
+
+                        <span class="contact__item-label">
+                            Email
+                        </span>
+
+                        <p>
+                            <a href="mailto:hello@hayatsweets.com">
+                                hello@hayatsweets.com
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Divider -->
+
+                <div
+                    class="contact__card-divider"
+                    aria-hidden="true">
+                </div>
+
+
+                <!-- Directions -->
+
+                <a
+                    href="#"
+                    class="button button--primary contact__directions">
+
+                    <span>
+                        Get Directions
+                    </span>
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+  <!-- HAYAT SWEETS & BAKERS — INTERACTION ENGINE -->
+  <script src="js/cursor.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

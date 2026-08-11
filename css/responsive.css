@@ -1,0 +1,1739 @@
+/* =========================================================
+   HAYAT SWEETS & BAKERS — RESPONSIVE SYSTEM
+   ---------------------------------------------------------
+   Production responsive layer
+   - Mobile-first adaptation
+   - Tablet optimization
+   - Desktop refinement
+   - Large-screen scaling
+   - Touch-friendly interaction
+   - Navigation adaptation
+   - Grid / flex restructuring
+   - Typography & spacing control
+   - Accessibility considerations
+
+   DEPENDENCIES
+   - style.css
+   - animations.css
+
+   IMPORTANT
+   This file controls RESPONSIVENESS only.
+   Visual styling belongs to style.css.
+   Motion belongs to animations.css.
+========================================================= */
+
+
+/* =========================================================
+   01. RESPONSIVE ROOT HELPERS
+========================================================= */
+
+:root {
+    --container-mobile: 100%;
+    --container-tablet: 92%;
+    --container-desktop: 90%;
+    --container-wide: 86%;
+
+    --mobile-gutter: 1rem;
+    --tablet-gutter: 1.5rem;
+    --desktop-gutter: 2rem;
+
+    --mobile-section-space: 4rem;
+    --tablet-section-space: 5rem;
+    --desktop-section-space: 6rem;
+
+    --mobile-card-gap: 1rem;
+    --tablet-card-gap: 1.25rem;
+    --desktop-card-gap: 1.5rem;
+}
+
+
+/* =========================================================
+   02. GLOBAL MOBILE FOUNDATION
+========================================================= */
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    min-width: 320px;
+}
+
+
+/* Prevent accidental horizontal overflow */
+
+img,
+video,
+svg,
+canvas {
+    max-width: 100%;
+}
+
+
+/* Better mobile text rendering */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   03. CONTAINER SYSTEM
+========================================================= */
+
+.container {
+    width: var(--container-mobile);
+    max-width: 100%;
+    margin-inline: auto;
+    padding-inline: var(--mobile-gutter);
+}
+
+
+/* =========================================================
+   04. MOBILE NAVIGATION
+========================================================= */
+
+/*
+   Desktop navigation is hidden on mobile.
+   Mobile menu is controlled by JavaScript.
+*/
+
+.nav-list {
+    display: none;
+}
+
+.nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-menu {
+    display: block;
+    width: 100%;
+}
+
+
+/* Prevent mobile menu from escaping viewport */
+
+.mobile-menu {
+    max-width: 100vw;
+}
+
+
+/* =========================================================
+   05. HEADER RESPONSIVENESS
+========================================================= */
+
+.site-header {
+    width: 100%;
+}
+
+.site-header .container {
+    min-height: 4.25rem;
+}
+
+
+/* Keep brand from pushing navigation */
+
+.brand {
+    min-width: 0;
+}
+
+.brand img,
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================================
+   06. HERO — MOBILE
+========================================================= */
+
+.hero {
+    min-height: auto;
+}
+
+.hero .container {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+
+/* Hero content becomes single column */
+
+.hero-content,
+.hero-grid,
+.hero-inner {
+    grid-template-columns: 1fr;
+}
+
+
+/* Hero typography */
+
+.hero-title {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+    line-height: 1.05;
+}
+
+.hero-subtitle,
+.hero-description {
+    max-width: 100%;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* Hero buttons stack naturally */
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.hero-actions .button {
+    min-height: 3rem;
+}
+
+
+/* Hero media */
+
+.hero-media,
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   07. SECTION SPACING — MOBILE
+========================================================= */
+
+section {
+    scroll-margin-top: 5rem;
+}
+
+.section {
+    padding-block: var(--mobile-section-space);
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: clamp(1.9rem, 8vw, 3rem);
+    line-height: 1.1;
+}
+
+.section-description {
+    max-width: 100%;
+    font-size: 0.95rem;
+}
+
+
+/* =========================================================
+   08. GRID SYSTEM — MOBILE
+========================================================= */
+
+/*
+   Everything starts as one column.
+   Tablet and desktop progressively expand.
+*/
+
+.grid,
+.cards-grid,
+.menu-grid,
+.gallery-grid,
+.features-grid,
+.testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: var(--mobile-card-gap);
+}
+
+
+/* =========================================================
+   09. MENU — MOBILE
+========================================================= */
+
+.menu-grid {
+    width: 100%;
+}
+
+.menu-card {
+    width: 100%;
+}
+
+.menu-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Menu filters become horizontally scrollable */
+
+.menu-filters {
+    display: flex;
+    gap: 0.625rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+
+    scrollbar-width: none;
+
+    -webkit-overflow-scrolling: touch;
+}
+
+.menu-filters::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   10. MENU LIST RESPONSIVENESS
+========================================================= */
+
+#menu li {
+    min-width: 0;
+}
+
+#menu li img {
+    max-width: 100%;
+}
+
+
+/* Prevent long menu names from breaking layout */
+
+.menu-card h3,
+.menu-card h4,
+.menu-item-title {
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   11. GALLERY — MOBILE
+========================================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#gallery figure {
+    width: 100%;
+    margin: 0;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Disable aggressive sibling blur on touch screens */
+
+#gallery:hover figure:not(:hover) {
+    filter: none;
+    opacity: 1;
+}
+
+
+/* =========================================================
+   12. TESTIMONIALS — MOBILE
+========================================================= */
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+#testimonials article {
+    width: 100%;
+}
+
+
+/* =========================================================
+   13. CARDS — MOBILE
+========================================================= */
+
+.card,
+.glass-card,
+.menu-card,
+.feature-card,
+.testimonial-card {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* Avoid hover-dependent content on touch */
+
+.card .card-reveal {
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================================================
+   14. IMAGE RESPONSIVENESS
+========================================================= */
+
+.img-zoom,
+.img-shine,
+.img-tilt,
+.img-light {
+    max-width: 100%;
+}
+
+.img-zoom img,
+.img-shine img,
+.img-tilt img {
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   15. BUTTON RESPONSIVENESS
+========================================================= */
+
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+    min-height: 2.75rem;
+}
+
+
+/*
+   Touch targets should remain comfortable.
+*/
+
+.nav-toggle,
+.menu-filter,
+.social-link {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+}
+
+
+/* Buttons don't become unnecessarily huge */
+
+.hero-actions .button {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   16. RESERVATION FORM — MOBILE
+========================================================= */
+
+.form-grid,
+.reservation-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.field {
+    width: 100%;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    min-width: 0;
+}
+
+
+/* Full-width submit button */
+
+.reservation-form .button,
+.reserve-form .button {
+    width: 100%;
+}
+
+
+/* =========================================================
+   17. FORM INPUT UX
+========================================================= */
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    font-size: 16px;
+}
+
+
+/*
+   16px prevents iOS Safari from zooming into inputs.
+*/
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+
+/* =========================================================
+   18. FOOTER — MOBILE
+========================================================= */
+
+.site-footer {
+    width: 100%;
+}
+
+.footer-grid,
+.footer__grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.footer__logo {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Footer navigation */
+
+.footer-nav-list,
+.footer__links,
+.footer__contact,
+.footer__social {
+    min-width: 0;
+}
+
+
+/* Social links */
+
+.footer__social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+
+/* =========================================================
+   19. MOBILE FOOTER ALIGNMENT
+========================================================= */
+
+.site-footer .container {
+    padding-top: 3.5rem;
+    padding-bottom: 2rem;
+}
+
+
+/* =========================================================
+   20. SMALL MOBILE — <= 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .container {
+        padding-inline: 0.875rem;
+    }
+
+    .hero .container {
+        padding-top: 4.5rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.15rem, 11vw, 3rem);
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: clamp(1.75rem, 9vw, 2.5rem);
+    }
+
+    .card,
+    .menu-card,
+    .feature-card,
+    .testimonial-card {
+        border-radius: 1rem;
+    }
+
+}
+
+
+/* =========================================================
+   21. MOBILE LANDSCAPE
+========================================================= */
+
+@media (max-height: 520px) and (orientation: landscape) {
+
+    .hero .container {
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+    .mobile-menu {
+        max-height: calc(100vh - 4rem);
+        overflow-y: auto;
+    }
+
+}
+
+
+/* =========================================================
+   22. TABLET — >= 600px
+========================================================= */
+
+@media (min-width: 600px) {
+
+    :root {
+        --mobile-card-gap: 1.25rem;
+    }
+
+    .container {
+        width: var(--container-tablet);
+        padding-inline: 0;
+    }
+
+
+    /* -----------------------------------------
+       Hero
+    ----------------------------------------- */
+
+    .hero .container {
+        padding-top: 6rem;
+        padding-bottom: 5rem;
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 7vw, 4.8rem);
+    }
+
+
+    /* -----------------------------------------
+       Hero actions
+    ----------------------------------------- */
+
+    .hero-actions {
+        gap: 1rem;
+    }
+
+
+    /* -----------------------------------------
+       Two-column grids
+    ----------------------------------------- */
+
+    .features-grid,
+    .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Menu
+    ----------------------------------------- */
+
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Gallery
+    ----------------------------------------- */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Testimonials
+    ----------------------------------------- */
+
+    .testimonials-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Forms
+    ----------------------------------------- */
+
+    .form-grid,
+    .reservation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .field--full,
+    .form-field--full {
+        grid-column: 1 / -1;
+    }
+
+
+    /* -----------------------------------------
+       Footer
+    ----------------------------------------- */
+
+    .footer-grid,
+    .footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   23. TABLET — >= 768px
+========================================================= */
+
+@media (min-width: 768px) {
+
+    .container {
+        width: 90%;
+    }
+
+
+    /* -----------------------------------------
+       Header
+    ----------------------------------------- */
+
+    .site-header .container {
+        min-height: 4.75rem;
+    }
+
+
+    /* Desktop navigation starts appearing */
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       Hero
+    ----------------------------------------- */
+
+    .hero-grid,
+    .hero-inner,
+    .hero-content {
+        grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+
+    .hero .container {
+        padding-top: 7rem;
+        padding-bottom: 6rem;
+    }
+
+
+    /* -----------------------------------------
+       Section
+    ----------------------------------------- */
+
+    .section {
+        padding-block: var(--tablet-section-space);
+    }
+
+    .section-header {
+        margin-bottom: 2.75rem;
+    }
+
+
+    /* -----------------------------------------
+       Menu
+    ----------------------------------------- */
+
+    .menu-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Gallery
+    ----------------------------------------- */
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Testimonials
+    ----------------------------------------- */
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Footer
+    ----------------------------------------- */
+
+    .footer-grid,
+    .footer__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================================================
+   24. DESKTOP — >= 1024px
+========================================================= */
+
+@media (min-width: 1024px) {
+
+    .container {
+        width: var(--container-desktop);
+        max-width: 1200px;
+    }
+
+
+    /* -----------------------------------------
+       Header
+    ----------------------------------------- */
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+
+    /* -----------------------------------------
+       Hero
+    ----------------------------------------- */
+
+    .hero .container {
+        padding-top: 8rem;
+        padding-bottom: 7rem;
+    }
+
+    .hero-grid,
+    .hero-inner,
+    .hero-content {
+        gap: 4rem;
+    }
+
+    .hero-title {
+        font-size: clamp(3.8rem, 5vw, 5.5rem);
+    }
+
+
+    /* -----------------------------------------
+       Section
+    ----------------------------------------- */
+
+    .section {
+        padding-block: var(--desktop-section-space);
+    }
+
+
+    /* -----------------------------------------
+       Features
+    ----------------------------------------- */
+
+    .features-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------
+       Menu
+    ----------------------------------------- */
+
+    .menu-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--desktop-card-gap);
+    }
+
+
+    /* -----------------------------------------
+       Gallery
+    ----------------------------------------- */
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+
+
+    /* -----------------------------------------
+       Reservation
+    ----------------------------------------- */
+
+    .form-grid,
+    .reservation-grid {
+        gap: 1.25rem;
+    }
+
+
+    /* -----------------------------------------
+       Footer
+    ----------------------------------------- */
+
+    .footer-grid,
+    .footer__grid {
+        grid-template-columns:
+            1.4fr
+            1fr
+            1fr
+            1fr;
+    }
+
+}
+
+
+/* =========================================================
+   25. LARGE DESKTOP — >= 1280px
+========================================================= */
+
+@media (min-width: 1280px) {
+
+    .container {
+        width: var(--container-wide);
+        max-width: 1320px;
+    }
+
+
+    .hero .container {
+        padding-top: 9rem;
+        padding-bottom: 8rem;
+    }
+
+
+    .hero-grid,
+    .hero-inner,
+    .hero-content {
+        gap: 5rem;
+    }
+
+
+    .hero-title {
+        font-size: clamp(4.2rem, 5vw, 6rem);
+    }
+
+
+    .section-header {
+        margin-bottom: 3.5rem;
+    }
+
+
+    .menu-grid {
+        gap: 1.75rem;
+    }
+
+
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   26. ULTRA-WIDE — >= 1536px
+========================================================= */
+
+@media (min-width: 1536px) {
+
+    .container {
+        max-width: 1400px;
+    }
+
+
+    .hero-grid,
+    .hero-inner,
+    .hero-content {
+        gap: 6rem;
+    }
+
+
+    .hero-title {
+        font-size: clamp(4.5rem, 4.5vw, 6.5rem);
+    }
+
+}
+
+
+/* =========================================================
+   27. TOUCH DEVICE OPTIMIZATION
+========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /*
+       Remove interactions that only make sense
+       with a mouse.
+    */
+
+    .card:hover,
+    .menu-card:hover,
+    .feature-card:hover {
+        transform: none;
+    }
+
+
+    .card .card-reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+
+    #gallery:hover figure:not(:hover) {
+        filter: none;
+        opacity: 1;
+    }
+
+
+    /*
+       Increase touch comfort.
+    */
+
+    button,
+    .button,
+    .nav-toggle,
+    .menu-filter,
+    .social-link,
+    a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+}
+
+
+/* =========================================================
+   28. POINTER DEVICES
+========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    /*
+       Desktop-only hover behavior.
+    */
+
+    .menu-filter:hover {
+        transform: translateY(-1px);
+    }
+
+}
+
+
+/* =========================================================
+   29. VERY SHORT SCREENS
+========================================================= */
+
+@media (max-height: 700px) and (min-width: 768px) {
+
+    .hero .container {
+        padding-top: 6rem;
+        padding-bottom: 5rem;
+    }
+
+}
+
+
+/* =========================================================
+   30. REDUCED MOTION — RESPONSIVE LAYER
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card,
+    .menu-card,
+    .feature-card,
+    .testimonial-card,
+    .button,
+    .hero-actions,
+    .nav-list,
+    .gallery-grid {
+        scroll-behavior: auto;
+    }
+
+}
+
+
+/* =========================================================
+   31. ACCESSIBILITY — KEYBOARD FOCUS
+========================================================= */
+
+@media (min-width: 768px) {
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+        outline-offset: 4px;
+    }
+
+}
+
+
+/* =========================================================
+   32. PRINT RESPONSIVENESS
+========================================================= */
+
+@media print {
+
+    .site-header,
+    .nav-toggle,
+    .mobile-menu,
+    .hero-actions,
+    .page-loader,
+    .scroll-indicator,
+    .site-footer {
+        display: none !important;
+    }
+
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding-inline: 0;
+    }
+
+
+    section {
+        padding-block: 1rem;
+    }
+
+
+    * {
+        animation: none !important;
+        transition: none !important;
+        box-shadow: none !important;
+    }
+
+}
+
+
+/* =========================================================
+   END OF RESPONSIVE SYSTEM
+========================================================= */
+/* =========================================================
+   24. FINAL RESPONSIVE POLISH
+========================================================= */
+
+@media (max-width: 48rem) {
+  .hero {
+    min-height: 78svh;
+    padding-block: 5.5rem 4.5rem;
+  }
+
+  .hero-title {
+    max-width: 12ch;
+    margin-inline: auto;
+  }
+
+  .hero .flex--center {
+    width: min(100%, 24rem);
+    margin-inline: auto;
+    flex-direction: column;
+  }
+
+  .hero .button {
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 12rem;
+  }
+
+  .gallery-item--large,
+  .gallery-item--wide {
+    grid-column: span 2;
+  }
+
+  .gallery-item--tall {
+    grid-row: span 2;
+  }
+
+  .hsb-back-top {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .hero {
+    min-height: 82svh;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 15rem;
+  }
+
+  .gallery-item--large,
+  .gallery-item--wide,
+  .gallery-item--tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .button {
+    letter-spacing: .1em;
+  }
+}
+
+
+/* =========================================================
+   33. MOBILE UX REBUILD — FINAL PROJECT OVERRIDES
+   ---------------------------------------------------------
+   This layer targets the ACTUAL production class names used
+   by index.html. It intentionally sits last so it wins over
+   earlier generic responsive rules without changing desktop.
+========================================================= */
+
+@media (max-width: 767px) {
+
+    /* ---------- Global mobile rhythm ---------- */
+    html {
+        overflow-x: clip;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        width: 100%;
+        min-width: 0;
+        overflow-x: clip;
+    }
+
+    .container {
+        width: 100%;
+        max-width: none;
+        padding-inline: 1rem;
+    }
+
+    section,
+    .section {
+        scroll-margin-top: 4.5rem;
+    }
+
+    .section {
+        padding-block: 4.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.9rem, 8vw, 2.8rem);
+        line-height: 1.12;
+    }
+
+    .section-subtitle {
+        max-width: 36rem;
+        font-size: .94rem;
+        line-height: 1.75;
+    }
+
+    /* ---------- Header ---------- */
+    .site-header {
+        min-height: 4.25rem;
+        gap: .65rem;
+        padding: .65rem 1rem;
+    }
+
+    .brand {
+        min-width: 0;
+        max-width: calc(100% - 4rem);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .brand img,
+    .brand svg {
+        max-height: 2.25rem;
+    }
+
+    .primary-navigation {
+        margin-left: auto;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.9rem;
+        height: 2.9rem;
+        flex: 0 0 2.9rem;
+        padding: 0;
+        border: 1px solid rgba(198,156,95,.35);
+        border-radius: 50%;
+        background: rgba(255,252,246,.62);
+        box-shadow: 0 8px 22px rgba(62,42,27,.08);
+    }
+
+    .nav-toggle span {
+        display: block;
+    }
+
+    .header-cta {
+        display: none;
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+        min-height: auto;
+        padding-block: 6rem 4.5rem;
+    }
+
+    .hero .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .hero-title {
+        max-width: 12ch;
+        margin-inline: auto;
+        font-size: clamp(2.55rem, 12vw, 4rem);
+        line-height: 1.02;
+    }
+
+    .hero .flex--center,
+    .hero-actions {
+        width: 100%;
+        max-width: 26rem;
+        margin-inline: auto;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero .button,
+    .hero-actions .button {
+        width: 100%;
+    }
+
+    /* ---------- About ---------- */
+    .about-intro {
+        margin-block-end: 2.8rem;
+    }
+
+    .about-story {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .about-content {
+        max-width: none;
+    }
+
+    .about-heading {
+        max-width: 14ch;
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .about-features {
+        margin-block: 1.75rem;
+    }
+
+    .about-feature {
+        grid-template-columns: 2.5rem minmax(0, 1fr);
+        gap: .8rem;
+        padding: 1rem;
+    }
+
+    .about-visual,
+    .about-visual img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* ---------- Featured dishes ---------- */
+    .featured-dishes-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 1.1rem;
+    }
+
+    .featured-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .featured-card__media {
+        aspect-ratio: 4 / 3;
+    }
+
+    .featured-card__content {
+        padding: 1.1rem;
+    }
+
+    /* ---------- Menu ---------- */
+    .menu-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 1rem;
+    }
+
+    .menu-panel {
+        min-width: 0;
+        padding: 1.15rem;
+    }
+
+    .menu-item {
+        gap: .8rem;
+        padding-block: 1rem;
+    }
+
+    .menu-item__info h4 {
+        font-size: 1rem;
+    }
+
+    .menu-item__info p {
+        max-width: none;
+        font-size: .78rem;
+    }
+
+    .menu-item__price {
+        font-size: .8rem;
+    }
+
+    /* ---------- Why choose us ---------- */
+    .why-choose-us__grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .why-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 1.35rem;
+    }
+
+    .why-card__content {
+        margin-top: 1.25rem;
+    }
+
+    .why-card h3 {
+        font-size: clamp(1.35rem, 6vw, 1.7rem);
+    }
+
+    .why-card p {
+        font-size: .9rem;
+        line-height: 1.7;
+    }
+
+    .why-choose-us__statement {
+        flex-direction: column;
+        gap: .8rem;
+        margin-top: 2.5rem;
+    }
+
+    .why-choose-us__line {
+        width: 3.5rem;
+    }
+
+    /* ---------- Gallery ---------- */
+    .gallery-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        grid-auto-rows: auto;
+        gap: .9rem;
+    }
+
+    .gallery-item,
+    .gallery-item--large,
+    .gallery-item--wide,
+    .gallery-item--tall {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        width: 100%;
+        min-height: 15rem;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .gallery-item figcaption {
+        padding: .85rem;
+    }
+
+    /* ---------- Testimonials ---------- */
+    .testimonials__grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        padding: 1.25rem;
+    }
+
+    .testimonial-card--featured {
+        transform: none;
+    }
+
+    .testimonial-card--featured:hover {
+        transform: translateY(-4px);
+    }
+
+    .testimonial-card__top {
+        margin-bottom: 1.25rem;
+    }
+
+    .testimonial-card__quote p {
+        font-size: clamp(1.02rem, 4.4vw, 1.22rem);
+        line-height: 1.65;
+    }
+
+    .testimonial-card__author {
+        margin-top: 1.35rem;
+    }
+
+    /* ---------- Reservation ---------- */
+    .reservation__layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .reservation__content {
+        max-width: none;
+    }
+
+    .reservation__content .section-title {
+        font-size: clamp(2.2rem, 10vw, 3.5rem);
+    }
+
+    .reservation__form-wrapper {
+        width: 100%;
+        min-width: 0;
+        padding: 1.15rem;
+    }
+
+    .reservation-form__row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact__layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2.5rem;
+    }
+
+    .contact__content {
+        max-width: none;
+    }
+
+    .contact__card {
+        width: 100%;
+        min-width: 0;
+        padding: 1.35rem;
+    }
+
+    .contact__social-links {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact__social-links a {
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* ---------- Footer ---------- */
+    .footer__main {
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 2.25rem;
+        padding-block: 3.75rem 2.5rem;
+    }
+
+    .footer__brand {
+        max-width: none;
+    }
+
+    .footer__column {
+        min-width: 0;
+    }
+
+    .footer-nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: .75rem;
+    }
+
+    /* ---------- Touch interaction ---------- */
+    .featured-card:hover,
+    .menu-panel:hover,
+    .why-card:hover,
+    .testimonial-card:hover,
+    .gallery-item:hover,
+    .about-visual:hover {
+        transform: none;
+    }
+
+    .featured-card:hover img,
+    .gallery-item:hover img,
+    .about-visual:hover img {
+        transform: none;
+        filter: none;
+    }
+
+    .gallery-grid:hover .gallery-item:not(:hover) {
+        filter: none !important;
+        opacity: 1 !important;
+    }
+
+    /* Keep scroll reveals smooth but never let a card become unreadable. */
+    .js .reveal-card,
+    .js [data-stagger-item] {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-inline: .9rem;
+    }
+
+    .section {
+        padding-block: 4rem;
+    }
+
+    .hero {
+        padding-block: 5.5rem 4rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.8rem, 8.5vw, 2.5rem);
+    }
+
+    .gallery-grid {
+        gap: .75rem;
+    }
+
+    .gallery-item,
+    .gallery-item--large,
+    .gallery-item--wide,
+    .gallery-item--tall {
+        min-height: 13rem;
+    }
+
+    .contact__social-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .container {
+        padding-inline: .8rem;
+    }
+
+    .site-header {
+        padding-inline: .8rem;
+    }
+
+    .hero-title {
+        font-size: clamp(2.25rem, 12vw, 3rem);
+    }
+
+    .why-card,
+    .testimonial-card,
+    .menu-panel,
+    .reservation__form-wrapper,
+    .contact__card {
+        padding: 1rem;
+    }
+}
+
+/* =========================================================
+   34. CONTRAST SAFETY — FINAL VISUAL FIX
+   ---------------------------------------------------------
+   The premium dark cards are intentionally dark. These rules
+   prevent later animation/background layers from washing out
+   their text on any viewport.
+========================================================= */
+
+.why-card {
+    background:
+        linear-gradient(145deg, #3a261b 0%, #2a1b13 100%) !important;
+    color: #f6eee2;
+}
+
+.why-card h3 {
+    color: #f6eee2 !important;
+}
+
+.why-card p {
+    color: rgba(240, 228, 211, .78) !important;
+}
+
+.testimonial-card--featured {
+    background:
+        linear-gradient(145deg, #3c271b 0%, #28170f 100%) !important;
+    color: #f6ecdf;
+}
+
+.testimonial-card--featured .testimonial-card__quote p {
+    color: #f6ecdf !important;
+}
+
+.testimonial-card--featured .testimonial-card__category {
+    color: #cbb087 !important;
+}
+
+.testimonial-card--featured .testimonial-card__rating {
+    color: #e2b96f !important;
+}
+
+.testimonial-card--featured .testimonial-card__author-info cite {
+    color: #f8eddf !important;
+}
+
+.testimonial-card--featured .testimonial-card__author-info span {
+    color: #c6ab84 !important;
+}
